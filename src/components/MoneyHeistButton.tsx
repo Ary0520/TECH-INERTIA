@@ -3,10 +3,17 @@
 import { motion, HTMLMotionProps } from 'framer-motion';
 import { ButtonHTMLAttributes } from 'react';
 
-interface MoneyHeistButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, HTMLMotionProps<'button'> {
+// interface MoneyHeistButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onAnimationStart'>, HTMLMotionProps<'button'> {
+//   variant?: 'primary' | 'outline';
+//   children: React.ReactNode;
+// }
+interface MoneyHeistButtonProps
+  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof HTMLMotionProps<'button'>>,
+    HTMLMotionProps<'button'> {
   variant?: 'primary' | 'outline';
   children: React.ReactNode;
 }
+
 
 export default function MoneyHeistButton({
   variant = 'primary',
