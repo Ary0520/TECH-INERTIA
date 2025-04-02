@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 'use client';
 
 import Link from 'next/link'
@@ -554,7 +553,7 @@ export default function Home() {
                 RECOGNITION
               </h3>
               <p className="text-gray-400 text-center">
-                You&apos;ll get recognized by industry experts
+                Get recognized by industry experts
               </p>
             </motion.div>
 
@@ -860,39 +859,25 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Mentors Section */}
-          <div className="mt-20">
+          
+          {/* <div className="mt-20">
             <h3 className="text-pink-600 text-2xl font-bold mb-6">MENTORS</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Mentor Card 1 */}
+              
               <motion.div>
-                <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden mb-4">
+                <div className="relative w-[250px] h-[250px] rounded-lg overflow-hidden mb-4">
                   <Image
-                    src="/director.jpg"
-                    alt="Dr. Somendra Shukla"
+                    src="/img3.jpg"
+                    alt="Sachin Gurjar"
                     fill
-                    className="object-cover scale-110"
+                    className="object-cover"
                   />
                 </div>
-                <h4 className="text-xl font-bold">Dr. Somendra Shukla</h4>
-                <p className="text-gray-400">SAMPLE</p>
+                <h4 className="text-xl font-bold">Sachin Gurjar</h4>
+                <p className="text-gray-400">Founder of Bit Builders</p>
               </motion.div>
 
-              {/* Mentor Card 2 */}
-              <motion.div>
-                <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
-                  <Image
-                    src="/dean.jpg"
-                    alt="Dr. Rakesh Kumar Singh"
-                    fill
-                    className="object-cover scale-110"
-                  />
-                </div>
-                <h4 className="text-xl font-bold">Dr. Rakesh Kumar Singh</h4>
-                <p className="text-gray-400">SAMPLE</p>
-              </motion.div>
-
-              {/* Mentor Card 3 */}
+              
               <motion.div>
                 <div className="relative w-[250px] h-[250px] rounded-lg overflow-hidden mb-4">
                   <Image
@@ -906,42 +891,9 @@ export default function Home() {
                 <p className="text-gray-400">Founder of Bit Builders</p>
               </motion.div>
             </div>
-          </div>
+          </div> */}
 
-          {/* Team Section */}
-          <div className="mt-20">
-            <h3 className="text-pink-600 text-2xl font-bold mb-6">TEAM</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {/* Team Card 1 */}
-              <motion.div>
-                <div className="bg-yellow-400 w-[250px] h-[250px] rounded-lg mb-4"></div>
-                <h4 className="text-xl font-bold">SAMPLE</h4>
-                <p className="text-gray-400">SAMPLE</p>
-              </motion.div>
-
-              {/* Team Card 2 */}
-              <motion.div>
-                <div className="bg-yellow-400 w-[250px] h-[250px] rounded-lg mb-4"></div>
-                <h4 className="text-xl font-bold">SAMPLE</h4>
-                <p className="text-gray-400">SAMPLE</p>
-              </motion.div>
-
-              {/* Team Card 3 */}
-              <motion.div>
-                <div className="bg-yellow-400 w-[250px] h-[250px] rounded-lg mb-4"></div>
-                <h4 className="text-xl font-bold">SAMPLE</h4>
-                <p className="text-gray-400">SAMPLE</p>
-              </motion.div>
-
-              {/* Team Card 4 */}
-              <motion.div>
-                <div className="bg-yellow-400 w-[250px] h-[250px] rounded-lg mb-4"></div>
-                <h4 className="text-xl font-bold">SAMPLE</h4>
-                <p className="text-gray-400">SAMPLE</p>
-              </motion.div>
-            </div>
-          </div>
-        </div>
+          
 
         {/* Sponsors Section */}
         <div id="sponsors" className="container mx-auto px-4 py-20 space-y-16">
@@ -1033,7 +985,7 @@ export default function Home() {
                     src="/director.jpg"
                     alt="Dr. Somendra Shukla"
                     fill
-                    className="object-cover scale-110"
+                    className="object-cover"
                   />
                 </div>
                 <h4 className="text-xl font-bold">Dr. Somendra Shukla</h4>
@@ -1045,12 +997,12 @@ export default function Home() {
                 <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
                   <Image
                     src="/dean.jpg"
-                    alt="Dr. Rakesh Kumar Singh"
+                    alt="Dr. Rakesh kumar singh"
                     fill
-                    className="object-cover scale-110"
+                    className="object-cover"
                   />
                 </div>
-                <h4 className="text-xl font-bold">Dr. Rakesh Kumar Singh</h4>
+                <h4 className="text-xl font-bold">Dr. Rakesh kumar singh</h4>
                 <p className="text-gray-400">SAMPLE</p>
               </motion.div>
 
@@ -1073,6 +1025,8 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
+
+          
 
           {/* Lead Organisers Section */}
           <div className="mt-20">
@@ -1172,108 +1126,56 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Events Head Section */}
-        <div className="container mx-auto px-4 py-20 space-y-16">
-          <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-wider flex items-center justify-center gap-4">
-              EVENTS <span className="text-red-600">HEAD</span>
-            </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto">
-              Meet the leaders behind our events
-            </p>
-          </div>
+          {/* Team Section */}
+          <div className="mt-20">
+            <h3 className="text-pink-600 text-2xl font-bold mb-6">Event Heads</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {/* Team Card 1 */}
+              <motion.div>
+                <div className="relative w-[250px] h-[250px] rounded-lg overflow-hidden mb-4">
+                  <Image
+                    src="/saksham.jpg"
+                    alt="Saksham"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <h4 className="text-xl font-bold">Saksham</h4>
+                <p className="text-gray-400">Event Head</p>
+              </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
-            {/* Event Head Card 1 */}
-            <div className="bg-black/80 p-8 rounded-lg border border-red-700/20 backdrop-blur-sm">
-              <div className="relative w-[250px] h-[250px] mx-auto mb-6 rounded-lg overflow-hidden bg-black/40">
-                <Image
-                  src="/saksham.jpg"
-                  alt="Saksham"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <h3 className="text-2xl font-bold text-center mb-4 text-white">
-                Saksham
-              </h3>
-              <p className="text-gray-400 text-center">
-                Event Head
-              </p>
+              {/* Team Card 2 */}
+              <motion.div>
+                <div className="relative w-[250px] h-[250px] rounded-lg overflow-hidden mb-4">
+                  <Image
+                    src="/arrushi.jpg"
+                    alt="Arrushi"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <h4 className="text-xl font-bold">Arrushi</h4>
+                <p className="text-gray-400">Event Head</p>
+              </motion.div>
+
+              {/* Team Card 3 */}
+              <motion.div>
+                <div className="bg-yellow-400 w-[250px] h-[250px] rounded-lg mb-4"></div>
+                <h4 className="text-xl font-bold">SAMPLE</h4>
+                <p className="text-gray-400">SAMPLE</p>
+              </motion.div>
+
+              {/* Team Card 4 */}
+              <motion.div>
+                <div className="bg-yellow-400 w-[250px] h-[250px] rounded-lg mb-4"></div>
+                <h4 className="text-xl font-bold">SAMPLE</h4>
+                <p className="text-gray-400">SAMPLE</p>
+              </motion.div>
             </div>
-
-            {/* Event Head Card 2 */}
-            <div className="bg-black/80 p-8 rounded-lg border border-red-700/20 backdrop-blur-sm">
-              <div className="relative w-[250px] h-[250px] mx-auto mb-6 rounded-lg overflow-hidden bg-black/40">
-                <Image
-                  src="/arrushi.jpg"
-                  alt="Arrushi"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <h3 className="text-2xl font-bold text-center mb-4 text-white">
-                Arrushi
-              </h3>
-              <p className="text-gray-400 text-center">
-                Event Head
-              </p>
-            </div>
-
-            {/* Event Head Card 3 */}
-            <div className="bg-black/80 p-8 rounded-lg border border-red-700/20 backdrop-blur-sm">
-              <div className="relative w-[250px] h-[250px] mx-auto mb-6 rounded-lg overflow-hidden bg-black/40">
-                <div className="absolute inset-0 bg-yellow-400"></div>
-              </div>
-              <h3 className="text-2xl font-bold text-center mb-4 text-white">
-                SAMPLE
-              </h3>
-              <p className="text-gray-400 text-center">
-                SAMPLE
-              </p>
-            </div>
-
-            {/* Event Head Card 4 */}
-            <div className="bg-black/80 p-8 rounded-lg border border-red-700/20 backdrop-blur-sm">
-              <div className="relative w-[250px] h-[250px] mx-auto mb-6 rounded-lg overflow-hidden bg-black/40">
-                <div className="absolute inset-0 bg-yellow-400"></div>
-              </div>
-              <h3 className="text-2xl font-bold text-center mb-4 text-white">
-                SAMPLE
-              </h3>
-              <p className="text-gray-400 text-center">
-                SAMPLE
-              </p>
-            </div>
-
-            <div className="bg-black/80 p-8 rounded-lg border border-red-700/20 backdrop-blur-sm">
-              <div className="relative w-[250px] h-[250px] mx-auto mb-6 rounded-lg overflow-hidden bg-black/40">
-                <div className="absolute inset-0 bg-yellow-400"></div>
-              </div>
-              <h3 className="text-2xl font-bold text-center mb-4 text-white">
-                SAMPLE
-              </h3>
-              <p className="text-gray-400 text-center">
-                SAMPLE
-              </p>
-            </div>
-
-            {/* Event Head Card 5 */}
-            {/* <div className="bg-black/80 p-8 rounded-lg border border-red-700/20 backdrop-blur-sm lg:col-start-2 lg:col-span-2">
-              <div className="relative w-[250px] h-[250px] mx-auto mb-6 rounded-lg overflow-hidden bg-black/40  ">
-                <div className="absolute inset-0 bg-yellow-400"></div>
-              </div>
-              <h3 className="text-2xl font-bold text-center mb-4 text-white">
-                SAMPLE
-              </h3>
-              <p className="text-gray-400 text-center">
-                SAMPLE
-              </p>
-            </div> */}
           </div>
         </div>
+
+
 
           {/* Event Management Section */}
           <div className="mt-20">
@@ -1317,7 +1219,7 @@ export default function Home() {
                   <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
                     <Image
                       src="/bhoomika.jpg"
-                      alt="bhoomika"
+                      alt="Bhoomika"
                       fill
                       className="object-cover"
                     />
@@ -1406,8 +1308,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        
 
         {/* Footer */}
         <footer className="bg-black/80 border-t border-red-700/20 backdrop-blur-sm mt-20">
