@@ -1,8 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
-import MoneyHeistMask from './MoneyHeistMask';
 
 interface MoneyHeistLayoutProps {
   children: ReactNode;
