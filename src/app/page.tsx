@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client';
 
 import Link from 'next/link'
@@ -553,7 +554,7 @@ export default function Home() {
                 RECOGNITION
               </h3>
               <p className="text-gray-400 text-center">
-                Get recognized by industry experts
+                You&apos;ll get recognized by industry experts
               </p>
             </motion.div>
 
