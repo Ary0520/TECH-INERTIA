@@ -44,7 +44,7 @@ export default function Home() {
                   ))}
                 </div>
                 <MoneyHeistButton variant="outline">
-                  Register
+                  <a href="#" target='_blank'>REGISTER</a>
                 </MoneyHeistButton>
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function Home() {
                 className="bg-black/50 p-8 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600/50 transition-colors"
               >
                 <div className="text-red-600 text-4xl mb-4">👥</div>
-                <h3 className="text-2xl font-bold mb-2">3000+ PARTICIPANTS</h3>
+                <h3 className="text-2xl font-bold mb-2">300+ PARTICIPANTS</h3>
                 <p className="text-gray-400">From across India</p>
               </motion.div>
               <motion.div
@@ -130,10 +130,10 @@ export default function Home() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap justify-center gap-4 mt-12">
               <MoneyHeistButton>
-                Register Now
+                <a href="#" target='_blank'>Register Now</a>
               </MoneyHeistButton>
               <MoneyHeistButton variant="outline">
-                Learn More
+                <a href="https://www.instagram.com/tech.inertia/" target='_blank'>Learn More</a>
               </MoneyHeistButton>
             </div>
           </motion.div>
@@ -151,50 +151,6 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
-            {/* Hackathon Card */}
-            <motion.div
-              whileHover={cardHover}
-              className="group bg-black/80 p-8 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300"
-            >
-              <div className="relative w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden bg-black/40 group-hover:scale-110 transition-transform">
-                <Image
-                  src="/hackathon.png"
-                  alt="Hackathon"
-                  fill
-                  className="object-contain p-1"
-                  priority
-                />
-              </div>
-              <h3 className="text-2xl font-bold text-center mb-4 text-white group-hover:text-red-500 transition-colors">
-                HACKATHON
-              </h3>
-              <p className="text-gray-400 text-center">
-                12-hour coding competition to build innovative solutions
-              </p>
-            </motion.div>
-
-            {/* Ideathon Card */}
-            <motion.div
-              whileHover={cardHover}
-              className="group bg-black/80 p-8 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300"
-            >
-              <div className="relative w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden bg-black/40 group-hover:scale-110 transition-transform">
-        <Image
-                  src="/ideathon.png"
-                  alt="Ideathon"
-                  fill
-                  className="object-contain p-1"
-          priority
-        />
-              </div>
-              <h3 className="text-2xl font-bold text-center mb-4 text-white group-hover:text-red-500 transition-colors">
-                IDEATHON
-              </h3>
-              <p className="text-gray-400 text-center">
-                Brainstorm and present innovative ideas to solve real-world problems
-              </p>
-            </motion.div>
-
             {/* BGMI Card */}
             <motion.div
               whileHover={cardHover}
@@ -236,6 +192,27 @@ export default function Home() {
               </h3>
               <p className="text-gray-400 text-center">
                 Competitive tactical shooter tournament for PC gamers
+              </p>
+            </motion.div>
+
+            <motion.div
+              whileHover={cardHover}
+              className="group bg-black/80 p-8 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300"
+            >
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden bg-black/40 group-hover:scale-110 transition-transform">
+              <Image
+                  src="/ideathon.png"
+                  alt="Ideathon"
+                  fill
+                  className="object-contain p-1"
+              priority
+              />
+              </div>
+              <h3 className="text-2xl font-bold text-center mb-4 text-white group-hover:text-red-500 transition-colors">
+                IDEATHON
+              </h3>
+              <p className="text-gray-400 text-center">
+                Brainstorm and present innovative ideas to solve real-world problems
               </p>
             </motion.div>
 
@@ -805,6 +782,21 @@ export default function Home() {
                 Build solutions that address environmental challenges and promote sustainable development.
               </p>
             </motion.div>
+            {/* healthtech track */}
+            <motion.div
+              whileHover={cardHover}
+              className="group bg-black/80 p-8 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300"
+            >
+              <div className="bg-black/40 p-4 rounded-lg mb-6 w-16 h-16 mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
+                <span className="text-4xl">🩺</span>
+              </div>
+              <h3 className="text-2xl font-bold text-center mb-4 text-white group-hover:text-red-500 transition-colors">
+                HEALTHTECH
+              </h3>
+              <p className="text-gray-400 text-center">
+                Transform the future of healthcare. Use technology to enhance medical access, efficiency, and personalized care.
+              </p>
+            </motion.div>
           </div>
         </div>
 
@@ -1009,18 +1001,28 @@ export default function Home() {
               {/* Leadership Card 3 */}
               <motion.div>
                 <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
-                  <div className="absolute inset-0 bg-yellow-400 rounded-full"></div>
+                  <Image
+                    src=""
+                    alt=""
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <h4 className="text-xl font-bold">SAMPLE</h4>
+                <h4 className="text-xl font-bold"></h4>
                 <p className="text-gray-400">SAMPLE</p>
               </motion.div>
 
               {/* Leadership Card 4 */}
               <motion.div>
                 <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
-                  <div className="absolute inset-0 bg-yellow-400 rounded-full"></div>
+                  <Image
+                    src="/indumam.jpg"
+                    alt="Ms. Indu Bhushan"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <h4 className="text-xl font-bold">SAMPLE</h4>
+                <h4 className="text-xl font-bold">Ms. Indu Bhushan</h4>
                 <p className="text-gray-400">SAMPLE</p>
               </motion.div>
             </div>
@@ -1106,10 +1108,15 @@ export default function Home() {
               <motion.div className="bg-[#1a1a1a] rounded-lg p-8">
                 <div className="flex flex-col items-center">
                   <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
-                    <div className="absolute inset-0 bg-yellow-400 rounded-full"></div>
+                    <Image
+                      src="/abhijeet.jpg"
+                      alt="abhijeet"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <h4 className="text-xl font-bold">SAMPLE</h4>
-                  <p className="text-gray-400 mb-4">SAMPLE</p>
+                  <h4 className="text-xl font-bold">Abhijeet</h4>
+                  <p className="text-gray-400 mb-4">Technical Lead</p>
                 </div>
               </motion.div>
 
@@ -1117,16 +1124,21 @@ export default function Home() {
               <motion.div className="bg-[#1a1a1a] rounded-lg p-8">
                 <div className="flex flex-col items-center">
                   <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
-                    <div className="absolute inset-0 bg-yellow-400 rounded-full"></div>
+                    <Image
+                      src="/aryan.jpg"
+                      alt="aryan"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <h4 className="text-xl font-bold">SAMPLE</h4>
-                  <p className="text-gray-400 mb-4">SAMPLE</p>
+                  <h4 className="text-xl font-bold">Aryan</h4>
+                  <p className="text-gray-400 mb-4">Technical Lead</p>
                 </div>
               </motion.div>
             </div>
           </div>
 
-          {/* Team Section */}
+          {/* EVENT LEAD Section */}
           <div className="mt-20">
             <h3 className="text-pink-600 text-2xl font-bold mb-6">Event Heads</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -1134,13 +1146,13 @@ export default function Home() {
               <motion.div>
                 <div className="relative w-[250px] h-[250px] rounded-lg overflow-hidden mb-4">
                   <Image
-                    src="/saksham.jpg"
-                    alt="Saksham"
+                    src="/aditya_srv.jpg"
+                    alt="adotya"
                     fill
                     className="object-cover"
                   />
                 </div>
-                <h4 className="text-xl font-bold">Saksham</h4>
+                <h4 className="text-xl font-bold">Aditya</h4>
                 <p className="text-gray-400">Event Head</p>
               </motion.div>
 
@@ -1148,8 +1160,22 @@ export default function Home() {
               <motion.div>
                 <div className="relative w-[250px] h-[250px] rounded-lg overflow-hidden mb-4">
                   <Image
+                    src="/prikshit.jpg"
+                    alt="prikshit"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <h4 className="text-xl font-bold">Prikshit</h4>
+                <p className="text-gray-400">Event Head</p>
+              </motion.div>
+
+              {/* Team Card 3 */}
+              <motion.div>
+                <div className="relative w-[250px] h-[250px] rounded-lg overflow-hidden mb-4">
+                  <Image
                     src="/arrushi.jpg"
-                    alt="Arrushi"
+                    alt="arrushi"
                     fill
                     className="object-cover"
                   />
@@ -1158,18 +1184,18 @@ export default function Home() {
                 <p className="text-gray-400">Event Head</p>
               </motion.div>
 
-              {/* Team Card 3 */}
-              <motion.div>
-                <div className="bg-yellow-400 w-[250px] h-[250px] rounded-lg mb-4"></div>
-                <h4 className="text-xl font-bold">SAMPLE</h4>
-                <p className="text-gray-400">SAMPLE</p>
-              </motion.div>
-
               {/* Team Card 4 */}
               <motion.div>
-                <div className="bg-yellow-400 w-[250px] h-[250px] rounded-lg mb-4"></div>
-                <h4 className="text-xl font-bold">SAMPLE</h4>
-                <p className="text-gray-400">SAMPLE</p>
+                <div className="relative w-[250px] h-[250px] rounded-lg overflow-hidden mb-4">
+                  <Image
+                    src="/saksham.jpg"
+                    alt="saksham"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <h4 className="text-xl font-bold">Saksham</h4>
+                <p className="text-gray-400">Event Head</p>
               </motion.div>
             </div>
           </div>
@@ -1233,10 +1259,15 @@ export default function Home() {
               <motion.div className="bg-[#1a1a1a] rounded-lg p-8">
                 <div className="flex flex-col items-center">
                   <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
-                    <div className="absolute inset-0 bg-yellow-400 rounded-full"></div>
+                    <Image
+                      src=""
+                      alt=""
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <h4 className="text-xl font-bold">SAMPLE</h4>
-                  <p className="text-gray-400 mb-4">SAMPLE</p>
+                  <p className="text-gray-400 mb-4">Event Management</p>
                 </div>
               </motion.div>
 
@@ -1286,7 +1317,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Social Media Lead Section */}
           <div className="mt-20">
             <h3 className="text-pink-600 text-2xl font-bold mb-6">SOCIAL MEDIA LEAD</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -1307,6 +1337,129 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
+
+          
+          {/* Volunteers Section */}
+          <div className="mt-20">
+            <h3 className="text-pink-600 text-2xl font-bold mb-6">VOLUNTEERS</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* volunteer Card 1 */}
+              <motion.div className="bg-[#1a1a1a] rounded-lg p-8">
+                <div className="flex flex-col items-center">
+                  <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
+                    <Image
+                      src="/richa_vol.jpg"
+                      alt=""
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <h4 className="text-xl font-bold">Richa</h4>
+                  <p className="text-gray-400 mb-4">VOLUNTEER</p>
+                </div>
+              </motion.div>
+
+              {/*volunteer Card 2 */}
+              <motion.div className="bg-[#1a1a1a] rounded-lg p-8">
+                <div className="flex flex-col items-center">
+                  <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
+                    <Image
+                      src="/shreya_vol.jpg"
+                      alt=""
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <h4 className="text-xl font-bold">Shreya</h4>
+                  <p className="text-gray-400 mb-4">VOLUNTEER</p>
+                </div>
+              </motion.div>
+
+              {/* volunteer Card 3 */}
+              <motion.div className="bg-[#1a1a1a] rounded-lg p-8">
+                <div className="flex flex-col items-center">
+                  <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
+                    <Image
+                      src=""
+                      alt=""
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <h4 className="text-xl font-bold">SAMPLE</h4>
+                  <p className="text-gray-400 mb-4">VOLUNTEER</p>
+                </div>
+              </motion.div>
+
+              {/* volunteer Card 4 */}
+              <motion.div className="bg-[#1a1a1a] rounded-lg p-8">
+                <div className="flex flex-col items-center">
+                  <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
+                    <Image
+                      src=""
+                      alt=""
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <h4 className="text-xl font-bold">SAMPLE</h4>
+                  <p className="text-gray-400 mb-4">VOLUNTEER</p>
+                </div>
+              </motion.div>
+
+              {/* volunteer Card 5 */}
+              <motion.div className="bg-[#1a1a1a] rounded-lg p-8">
+                <div className="flex flex-col items-center">
+                  <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
+                    <Image
+                      src=""
+                      alt=""
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <h4 className="text-xl font-bold">SAMPLE</h4>
+                  <p className="text-gray-400 mb-4">VOLUNTEER</p>
+                </div>
+              </motion.div>
+
+              {/* volunteer Card 6 */}
+              <motion.div className="bg-[#1a1a1a] rounded-lg p-8">
+                <div className="flex flex-col items-center">
+                  <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
+                    <Image
+                      src=""
+                      alt=""
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <h4 className="text-xl font-bold">SAMPLE</h4>
+                  <p className="text-gray-400 mb-4">VOLUNTEER</p>
+                </div>
+              </motion.div>
+
+              {/* volunteer Card 7 */}
+              <motion.div className="bg-[#1a1a1a] rounded-lg p-8">
+                <div className="flex flex-col items-center">
+                  <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
+                    <Image
+                      src=""
+                      alt=""
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <h4 className="text-xl font-bold">SAMPLE</h4>
+                  <p className="text-gray-400 mb-4">VOLUNTEER</p>
+                </div>
+              </motion.div>
+
+              
+            </div>
+          </div>
+
+
         </div>
 
         {/* Footer */}
@@ -1337,11 +1490,6 @@ export default function Home() {
               <div className="space-y-6">
                 <h3 className="text-pink-600 text-2xl font-bold">CONNECT WITH US</h3>
                 <div className="flex space-x-6">
-                  <motion.a whileHover={{ scale: 1.1 }} className="text-gray-400 hover:text-pink-600 transition-colors">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                  </motion.a>
                   <motion.a 
                     href="https://chat.whatsapp.com/DaCGuryLAbmCgZbKRLs3Uf"
                     target="_blank"
@@ -1355,13 +1503,39 @@ export default function Home() {
                   </motion.a>
                   <motion.a 
                     href="https://www.linkedin.com/company/bit-builders00/posts/?feedView=all"
-          target="_blank"
-          rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }} 
                     className="text-gray-400 hover:text-pink-600 transition-colors"
                   >
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </motion.a>
+                  {/* Instagram Icon */}
+                  <motion.a
+                    href="https://www.instagram.com/tech.inertia"
+          target="_blank"
+          rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="text-white hover:text-pink-500 transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-6 h-6"
+                    >
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                     </svg>
                   </motion.a>
                 </div>
