@@ -122,7 +122,7 @@ export default function Home() {
                 className="bg-black/50 p-8 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600/50 transition-colors"
               >
                 <div className="text-red-600 text-4xl mb-4">🏆</div>
-                <h3 className="text-2xl font-bold mb-2">$100</h3>
+                <h3 className="text-2xl font-bold mb-2"> ₹10000</h3>
                 <p className="text-gray-400">In Prizes</p>
               </motion.div>
             </motion.div>
@@ -526,7 +526,7 @@ export default function Home() {
                 AMAZING PRIZES
               </h3>
               <p className="text-gray-400 text-center">
-                Win exciting prizes worth $100 and gain recognition for your innovations
+                Win exciting prizes worth ₹10000 and gain recognition for your innovations
               </p>
             </motion.div>
           </div>
@@ -673,7 +673,7 @@ export default function Home() {
                 🏆
               </div>
               <h3 className="text-5xl font-bold text-center mb-4 text-red-400 group-hover:text-red-300 transition-colors">
-                $100
+                 ₹10000
               </h3>
               <p className="text-gray-400 text-center text-lg">
                 Prize Pool
