@@ -1,9 +1,9 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, HTMLMotionProps } from 'framer-motion';
 import { ButtonHTMLAttributes } from 'react';
 
-interface MoneyHeistButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface MoneyHeistButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, HTMLMotionProps<'button'> {
   variant?: 'primary' | 'outline';
   children: React.ReactNode;
 }
@@ -52,4 +52,4 @@ export default function MoneyHeistButton({
       `}</style>
     </motion.button>
   );
-} 
+}

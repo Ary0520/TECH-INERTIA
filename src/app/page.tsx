@@ -1192,7 +1192,7 @@ export default function Home() {
                       className="object-cover"
                     />
                   </div>
-                  <h4 className="text-xl font-bold">Bhoomika Roy</h4>
+                  <h4 className="text-xl font-bold">Bhoomi Roy</h4>
                   <p className="text-gray-400 mb-4">Event Management</p>
                 </div>
               </motion.div>
