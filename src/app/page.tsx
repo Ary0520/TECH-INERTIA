@@ -86,7 +86,7 @@ export default function Home() {
                 className="flex items-center space-x-2"
               >
                 <span className="text-red-600">📅</span>
-                <span>April 15-16</span>
+                <span>April 23-24</span>
               </motion.div>
               <motion.div
                 whileHover={cardHover}
@@ -157,13 +157,13 @@ export default function Home() {
               className="group bg-black/80 p-8 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300"
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden bg-black/40 group-hover:scale-110 transition-transform">
-                <Image
+        <Image
                   src="/bgmi.jpeg"
                   alt="BGMI"
                   fill
                   className="object-contain p-1"
-                  priority
-                />
+          priority
+        />
               </div>
               <h3 className="text-2xl font-bold text-center mb-4 text-white group-hover:text-red-500 transition-colors">
                 BGMI
@@ -207,7 +207,7 @@ export default function Home() {
                   className="object-contain p-1"
               priority
               />
-              </div>
+        </div>
               <h3 className="text-2xl font-bold text-center mb-4 text-white group-hover:text-red-500 transition-colors">
                 IDEATHON
               </h3>
@@ -222,7 +222,7 @@ export default function Home() {
               className="group bg-black/80 p-8 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300"
             >
               <div className="relative w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden bg-black/40 group-hover:scale-110 transition-transform">
-                <Image
+          <Image
                   src="/robowars.png"
                   alt="Robo Wars"
                   fill
@@ -417,7 +417,7 @@ export default function Home() {
                     fill
                     className="object-contain rounded-lg"
                   />
-                </div>
+    </div>
                 <h4 className="text-2xl font-bold text-center mb-4">
                   BIT BUILDERS COMMUNITY
                 </h4>
@@ -981,7 +981,7 @@ export default function Home() {
                   />
                 </div>
                 <h4 className="text-xl font-bold">Dr. Somendra Shukla</h4>
-                <p className="text-gray-400">SAMPLE</p>
+                <p className="text-gray-400">Director, GNIT IPU</p>
               </motion.div>
 
               {/* Leadership Card 2 */}
@@ -995,21 +995,21 @@ export default function Home() {
                   />
                 </div>
                 <h4 className="text-xl font-bold">Dr. Rakesh kumar singh</h4>
-                <p className="text-gray-400">SAMPLE</p>
+                <p className="text-gray-400">Academics Dean</p>
               </motion.div>
 
               {/* Leadership Card 3 */}
               <motion.div>
                 <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
                   <Image
-                    src=""
-                    alt=""
+                    src="/manojSir.jpg"
+                    alt="Dr. Manoj Sir"
                     fill
                     className="object-cover"
                   />
                 </div>
-                <h4 className="text-xl font-bold"></h4>
-                <p className="text-gray-400">SAMPLE</p>
+                <h4 className="text-xl font-bold">Dr. Manoj Srivastava </h4>
+                <p className="text-gray-400">HOD, 1st Year</p>
               </motion.div>
 
               {/* Leadership Card 4 */}
@@ -1023,7 +1023,21 @@ export default function Home() {
                   />
                 </div>
                 <h4 className="text-xl font-bold">Ms. Indu Bhushan</h4>
-                <p className="text-gray-400">SAMPLE</p>
+                <p className="text-gray-400">Cultural Head</p>
+              </motion.div>
+
+              {/* Leadership Card 5 */}
+              <motion.div>
+                <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
+                  <Image
+                    src=""
+                    alt=""
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <h4 className="text-xl font-bold">Ms. Krishnpriya </h4>
+                <p className="text-gray-400">Placement Incharge</p>
               </motion.div>
             </div>
           </div>
@@ -1135,6 +1149,8 @@ export default function Home() {
                   <p className="text-gray-400 mb-4">Technical Lead</p>
                 </div>
               </motion.div>
+
+              
             </div>
           </div>
 
@@ -1260,13 +1276,13 @@ export default function Home() {
                 <div className="flex flex-col items-center">
                   <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
                     <Image
-                      src=""
-                      alt=""
+                      src="/anshit_eventmng.jpg"
+                      alt="anshit"
                       fill
                       className="object-cover"
                     />
                   </div>
-                  <h4 className="text-xl font-bold">SAMPLE</h4>
+                  <h4 className="text-xl font-bold">Anshit</h4>
                   <p className="text-gray-400 mb-4">Event Management</p>
                 </div>
               </motion.div>
@@ -1275,10 +1291,15 @@ export default function Home() {
               <motion.div className="bg-[#1a1a1a] rounded-lg p-8">
                 <div className="flex flex-col items-center">
                   <div className="relative w-[250px] h-[250px] rounded-full overflow-hidden border-2 border-pink-600/50 mb-4">
-                    <div className="absolute inset-0 bg-yellow-400 rounded-full"></div>
+                    <Image
+                      src=""
+                      alt=""
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <h4 className="text-xl font-bold">SAMPLE</h4>
-                  <p className="text-gray-400 mb-4">SAMPLE</p>
+                  <p className="text-gray-400 mb-4">Event Management</p>
                 </div>
               </motion.div>
 
