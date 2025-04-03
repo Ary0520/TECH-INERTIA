@@ -18,6 +18,16 @@ export default function Home() {
     transition: { duration: 0.2 }
   };
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth"
+    });
+  };
+
   return (
     <MoneyHeistLayout>
       <main className="min-h-screen">
@@ -37,7 +47,7 @@ export default function Home() {
                       key={item} 
                       href={`#${item.toLowerCase()}`}
                       className="text-gray-300 hover:text-red-600 transition-colors hidden sm:block hover:scale-110 transform duration-200"
-                      scroll={false}
+                      onClick={handleScroll}
                     >
                       {item}
                     </Link>
