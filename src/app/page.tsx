@@ -5,11 +5,12 @@ import Image from "next/image"
 import MoneyHeistLayout from '@/components/MoneyHeistLayout'
 import MoneyHeistButton from '@/components/MoneyHeistButton'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 export default function Home() {
   const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
+    initial: { y: 20, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
     transition: { duration: 0.5 }
   };
 
@@ -18,14 +19,14 @@ export default function Home() {
     transition: { duration: 0.2 }
   };
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const [activeDay, setActiveDay] = useState('day1');
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const href = e.currentTarget.href;
     const targetId = href.replace(/.*\#/, "");
     const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({
-      behavior: "smooth"
-    });
+    elem?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -264,8 +265,18 @@ export default function Home() {
           <div className="relative mt-16">
             {/* Timeline Header */}
             <div className="flex justify-center gap-32 mb-8">
-              <h3 className="text-2xl font-bold text-white">Day 1</h3>
-              <h3 className="text-2xl font-bold text-gray-400">Day 2</h3>
+              <h3 
+                className={`text-2xl font-bold cursor-pointer transition-colors duration-300 ${activeDay === 'day1' ? 'text-white' : 'text-gray-400 hover:text-gray-300'}`}
+                onClick={() => setActiveDay('day1')}
+              >
+                Day 1
+              </h3>
+              <h3 
+                className={`text-2xl font-bold cursor-pointer transition-colors duration-300 ${activeDay === 'day2' ? 'text-white' : 'text-gray-400 hover:text-gray-300'}`}
+                onClick={() => setActiveDay('day2')}
+              >
+                Day 2
+              </h3>
             </div>
 
             {/* Timeline Content */}
@@ -274,105 +285,194 @@ export default function Home() {
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-red-600"></div>
 
               {/* Timeline Events */}
-              <div className="space-y-12">
-                {/* Registration Starts */}
-                <motion.div
-                  whileHover={cardHover}
-                  className="flex items-center justify-start w-full"
-                >
-                  <div className="w-1/2 pr-16 text-right">
-                    <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
-                      <h4 className="text-xl font-bold mb-2">REGISTRATION STARTS</h4>
-                      <p className="text-red-600 text-lg">07:00 AM</p>
+              {activeDay === 'day1' ? (
+                <div className="space-y-12">
+                  {/* Registration & Check-in */}
+                  <motion.div
+                    whileHover={cardHover}
+                    className="flex items-center justify-start w-full"
+                  >
+                    <div className="w-1/2 pr-16 text-right">
+                      <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
+                        <h4 className="text-xl font-bold mb-2">REGISTRATION BEGINS & CHECK-IN</h4>
+                        <p className="text-red-600 text-lg">09:00 AM</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
-                </motion.div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
+                  </motion.div>
 
-                {/* Inauguration Ceremony */}
-                <motion.div
-                  whileHover={cardHover}
-                  className="flex items-center justify-end w-full"
-                >
-                  <div className="w-1/2 pl-16">
-                    <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
-                      <h4 className="text-xl font-bold mb-2">INAUGURATION CEREMONY [SIDE QUEST & MEME CONTEST]</h4>
-                      <p className="text-red-600 text-lg">09:00 AM</p>
+                  {/* Opening Ceremony */}
+                  <motion.div
+                    whileHover={cardHover}
+                    className="flex items-center justify-end w-full"
+                  >
+                    <div className="w-1/2 pl-16">
+                      <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
+                        <h4 className="text-xl font-bold mb-2">OPENING CEREMONY</h4>
+                        <p className="text-red-600 text-lg">10:00 AM</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
-                </motion.div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
+                  </motion.div>
 
-                {/* Hackathon Begins */}
-                <motion.div
-                  whileHover={cardHover}
-                  className="flex items-center justify-start w-full"
-                >
-                  <div className="w-1/2 pr-16 text-right">
-                    <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
-                      <h4 className="text-xl font-bold mb-2">HACKATHON BEGINS</h4>
-                      <p className="text-red-600 text-lg">12:00 PM</p>
+                  {/* Hackathon Begins */}
+                  <motion.div
+                    whileHover={cardHover}
+                    className="flex items-center justify-start w-full"
+                  >
+                    <div className="w-1/2 pr-16 text-right">
+                      <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
+                        <h4 className="text-xl font-bold mb-2">HACKATHON BEGINS</h4>
+                        <p className="text-red-600 text-lg">10:30 AM</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
-                </motion.div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
+                  </motion.div>
 
-                {/* Lunch Break */}
-                <motion.div
-                  whileHover={cardHover}
-                  className="flex items-center justify-end w-full"
-                >
-                  <div className="w-1/2 pl-16">
-                    <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
-                      <h4 className="text-xl font-bold mb-2">LUNCH BREAK</h4>
-                      <p className="text-red-600 text-lg">02:00 PM</p>
+                  {/* Mentoring Round */}
+                  <motion.div
+                    whileHover={cardHover}
+                    className="flex items-center justify-end w-full"
+                  >
+                    <div className="w-1/2 pl-16">
+                      <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
+                        <h4 className="text-xl font-bold mb-2">MENTORING ROUND</h4>
+                        <p className="text-red-600 text-lg">12:00 PM</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
-                </motion.div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
+                  </motion.div>
 
-                {/* Mentorship Round */}
-                <motion.div
-                  whileHover={cardHover}
-                  className="flex items-center justify-start w-full"
-                >
-                  <div className="w-1/2 pr-16 text-right">
-                    <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
-                      <h4 className="text-xl font-bold mb-2">MENTORSHIP ROUND 1 [GROUP DISCUSSION]</h4>
-                      <p className="text-red-600 text-lg">04:00 PM</p>
+                  {/* Lunch */}
+                  <motion.div
+                    whileHover={cardHover}
+                    className="flex items-center justify-start w-full"
+                  >
+                    <div className="w-1/2 pr-16 text-right">
+                      <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
+                        <h4 className="text-xl font-bold mb-2">LUNCH</h4>
+                        <p className="text-red-600 text-lg">01:00 PM</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
-                </motion.div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
+                  </motion.div>
 
-                {/* Hacking & Fun Activities */}
-                <motion.div
-                  whileHover={cardHover}
-                  className="flex items-center justify-end w-full"
-                >
-                  <div className="w-1/2 pl-16">
-                    <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
-                      <h4 className="text-xl font-bold mb-2">HACKING & FUN ACTIVITIES [GAME BOOTH, RED LIGHT GREEN LIGHT, SPIN THE WHEEL]</h4>
-                      <p className="text-red-600 text-lg">06:00 PM</p>
+                  {/* Judging Round */}
+                  <motion.div
+                    whileHover={cardHover}
+                    className="flex items-center justify-end w-full"
+                  >
+                    <div className="w-1/2 pl-16">
+                      <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
+                        <h4 className="text-xl font-bold mb-2">JUDGING ROUND</h4>
+                        <p className="text-red-600 text-lg">04:00 PM</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
-                </motion.div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
+                  </motion.div>
 
-                {/* Dinner */}
-                <motion.div
-                  whileHover={cardHover}
-                  className="flex items-center justify-start w-full"
-                >
-                  <div className="w-1/2 pr-16 text-right">
-                    <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
-                      <h4 className="text-xl font-bold mb-2">DINNER</h4>
-                      <p className="text-red-600 text-lg">09:00 PM</p>
+                  {/* Dispersal */}
+                  <motion.div
+                    whileHover={cardHover}
+                    className="flex items-center justify-start w-full"
+                  >
+                    <div className="w-1/2 pr-16 text-right">
+                      <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
+                        <h4 className="text-xl font-bold mb-2">DISPERSAL</h4>
+                        <p className="text-red-600 text-lg">05:30 PM</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
-                </motion.div>
-              </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
+                  </motion.div>
+                </div>
+              ) : (
+                <div className="space-y-12">
+                  {/* Day 2 Events */}
+                  {/* Breakfast */}
+                  <motion.div
+                    whileHover={cardHover}
+                    className="flex items-center justify-start w-full"
+                  >
+                    <div className="w-1/2 pr-16 text-right">
+                      <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
+                        <h4 className="text-xl font-bold mb-2">BREAKFAST</h4>
+                        <p className="text-red-600 text-lg">08:00 AM</p>
+                      </div>
+                    </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
+                  </motion.div>
+
+                  {/* Mentorship Round 2 */}
+                  <motion.div
+                    whileHover={cardHover}
+                    className="flex items-center justify-end w-full"
+                  >
+                    <div className="w-1/2 pl-16">
+                      <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
+                        <h4 className="text-xl font-bold mb-2">MENTORSHIP ROUND 2</h4>
+                        <p className="text-red-600 text-lg">10:00 AM</p>
+                      </div>
+                    </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
+                  </motion.div>
+
+                  {/* Hackathon Ends */}
+                  <motion.div
+                    whileHover={cardHover}
+                    className="flex items-center justify-start w-full"
+                  >
+                    <div className="w-1/2 pr-16 text-right">
+                      <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
+                        <h4 className="text-xl font-bold mb-2">HACKATHON ENDS</h4>
+                        <p className="text-red-600 text-lg">12:00 PM</p>
+                      </div>
+                    </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
+                  </motion.div>
+
+                  {/* Lunch */}
+                  <motion.div
+                    whileHover={cardHover}
+                    className="flex items-center justify-end w-full"
+                  >
+                    <div className="w-1/2 pl-16">
+                      <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
+                        <h4 className="text-xl font-bold mb-2">LUNCH</h4>
+                        <p className="text-red-600 text-lg">01:00 PM</p>
+                      </div>
+                    </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
+                  </motion.div>
+
+                  {/* Project Presentations */}
+                  <motion.div
+                    whileHover={cardHover}
+                    className="flex items-center justify-start w-full"
+                  >
+                    <div className="w-1/2 pr-16 text-right">
+                      <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
+                        <h4 className="text-xl font-bold mb-2">PROJECT PRESENTATIONS</h4>
+                        <p className="text-red-600 text-lg">02:00 PM</p>
+                      </div>
+                    </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
+                  </motion.div>
+
+                  {/* Prize Distribution */}
+                  <motion.div
+                    whileHover={cardHover}
+                    className="flex items-center justify-end w-full"
+                  >
+                    <div className="w-1/2 pl-16">
+                      <div className="bg-black/80 p-6 rounded-lg border border-red-700/20 backdrop-blur-sm hover:border-red-600 hover:shadow-[0_0_30px_rgba(220,38,38,0.2)] transition-all duration-300">
+                        <h4 className="text-xl font-bold mb-2">PRIZE DISTRIBUTION & CLOSING CEREMONY</h4>
+                        <p className="text-red-600 text-lg">04:00 PM</p>
+                      </div>
+                    </div>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-600 rounded-full"></div>
+                  </motion.div>
+                </div>
+              )}
             </div>
           </div>
         </div>
